@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
 	get '/', to: 'welcome#index'
 
-	get '/tasks', to: 'task#index'
-	get '/tasks/new', to: 'task#new'
-	post '/tasks', to: 'task#create'
+	get '/tasks', to: 'tasks#index'
+	get '/tasks/new', to: 'tasks#new'
+	post '/tasks', to: 'tasks#create'
+	get '/tasks/:id', to: 'tasks#show'
+	get '/tasks/:id/edit', to: 'tasks#edit'
+	patch '/tasks/:id', to: 'tasks#update'
 end
